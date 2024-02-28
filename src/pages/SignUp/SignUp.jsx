@@ -2,19 +2,19 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 
-const Login = () => {
+const SignUp = () => {
 
-    const {signIn} = useContext(AuthContext);
+    const {createUser} = useContext(AuthContext);
 
-    const handleLogin = (e) => {
+    const handleSignUp = (e) => {
         e.preventDefault();
-        console.log("login")
         const form = e.target;
+        const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password)
+        console.log(name, email, password)
 
-        signIn(email, password)
+        createUser(email, password)
         .then(result => {
             const user = result.user;
             console.log(user)
@@ -24,7 +24,11 @@ const Login = () => {
 
     return (
         <div className="custom-height container">
-            <form onSubmit={handleLogin}>
+            <form onSubmit={handleSignUp}>
+            <div>
+                    <label className="me-2">Name:</label>
+                    <input type="text" name="name" placeholder="enter your name" />
+                </div>
                 <div>
                     <label className="me-2">Email:</label>
                     <input type="text" name="email" placeholder="enter your email" />
@@ -34,13 +38,13 @@ const Login = () => {
                     <input type="text" name="password" placeholder="enter your password" />
                 </div>
                 <div>
-                    <input type="submit" value={"Login"} />
+                    <input type="submit" value={"Sign up"} />
                 </div>
             </form>
 
-            <p>Do not have an account? <Link to={"/signup"}>Sign Up</Link></p>
+            <p>Already have an account? <Link to={"/login"}>Login</Link></p>
         </div>
     );
 };
 
-export default Login;
+export default SignUp;

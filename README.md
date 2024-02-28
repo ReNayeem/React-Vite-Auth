@@ -31,6 +31,11 @@ install: npm i firebase
 create firebase folder and create firebase.config.js file paste the data.
 
 
+for props error ignore add in .eslintrc.cjs file
+'react/prop-types': 'off'
+this
+
+
 
 
 
