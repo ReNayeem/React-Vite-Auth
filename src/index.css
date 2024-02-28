@@ -1,11 +1,30 @@
-.main-app{
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* .main-app{
   background-color: cadetblue;
-  padding: 0;
-  margin: 0;
   justify-content: center;
   display: flex;
-}
+} */
 
 *{
   margin: 0;
+}
+
+.custom-height{
+  min-height: calc(100vh - 56px - 24px);
+  margin-top: 56px;
+}
+
+.custom-footer{
+  background-color: #fafafa;
+}
+
+.custom-navbar-link{
+  text-decoration: none;
+  color: cadetblue;
+}
+
+.custom-navbar-links{
+  display: flex;
+  align-items: center;
 }

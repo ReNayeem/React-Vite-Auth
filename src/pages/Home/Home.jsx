@@ -1,7 +1,7 @@
 const Home = () => {
     return (
-        <div>
-            This is home.
+        <div className="container custom-height">
+            This is home
         </div>
     );
 };

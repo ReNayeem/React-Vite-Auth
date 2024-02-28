@@ -26,6 +26,11 @@ import this in index.css
 @tailwind utilities;
 
 
+firebase setup
+install: npm i firebase
+create firebase folder and create firebase.config.js file paste the data.
+
+
 
 
 
