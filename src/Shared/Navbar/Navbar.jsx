@@ -46,6 +46,7 @@ function NavScrollExample() {
             <Nav.Link href="#" disabled>
               Link
             </Nav.Link>
+            <Link className='custom-navbar-link me-2' to={"/number"}>Number</Link>
             {
               user?.email
               ? 
