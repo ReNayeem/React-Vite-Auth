@@ -2,6 +2,12 @@
 https://reactrouter.com/en/main/start/tutorial
 npm create vite@latest name-of-your-project -- --template react
 npm install react-router-dom localforage match-sorter sort-by
+npm run dev
+
+docker setup
+check vite.config.js
+dockerfile
+don't use .dockerignore
 
 if want to use tailwind css
 https://tailwindcss.com/docs/guides/vite
